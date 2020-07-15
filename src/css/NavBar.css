@@ -1,0 +1,28 @@
+.navbar-container{
+    width: 100%;
+    height: max-content;
+}
+
+.navbar-list{
+    list-style-type: none;
+}
+.navbar-list li{
+    padding: 10px;
+    font-family: Verdana;
+    font-weight: bolder;
+    display: inline;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+    text-decoration: none;
+}
+.navbar-list li:active{
+    background-color: rgb(224, 224, 224);
+}
+.navbar-list li:hover{ 
+    border-bottom: 2px solid rgb(63, 236, 63);
+}

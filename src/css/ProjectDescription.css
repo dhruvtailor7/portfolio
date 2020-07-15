@@ -1,0 +1,25 @@
+.project-description-container{
+        font-size: x-large;
+        display: grid;
+        grid-template-columns: 100%;
+        margin : 5%;
+        width:70%;
+        height : auto;
+}
+.project-image{
+    box-shadow: 0px 0px 1px 2px black;
+    border-radius: 10px;
+    max-width: 100%;
+}
+.skills{
+    text-align: left;
+    list-style-type: none;
+}
+.description{
+    text-align: left;
+}
+hr{
+    margin-top: -1%;
+    background-color: lightgray;
+    width: 100%;
+}
