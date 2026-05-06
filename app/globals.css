@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "@vscode/codicons/dist/codicon.css";
+/* app/globals.css */
+
+/* Set up fallbacks just in case, though Next.js will load the JS instantly */
+:root {
+  --background: #1e1e1e;
+  --surface: #252526;
+  --surface-elevated: #2d2d30;
+  --border: #3e3e42;
+  --accent: #007acc;
+  --foreground: #d4d4d4;
+  --muted-foreground: #808080;
+}
+
+body {
+  font-family: var(--font-jetbrains-mono, sans-serif); /* Use the CSS variable for font */
+  color: var(--foreground);
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .thin-scrollbar {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: rgba(177, 16, 16, 0.643);
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(177, 16, 16, 0.643);
+    border-radius: 9999px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(14, 255, 54, 0.643);
+  }
+}
