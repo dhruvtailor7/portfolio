@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@vscode/codicons/dist/codicon.css";
+@import "./animations.css";
 /* app/globals.css */
 
 /* Set up fallbacks just in case, though Next.js will load the JS instantly */
@@ -11,6 +12,8 @@
   --accent: #007acc;
   --foreground: #d4d4d4;
   --muted-foreground: #808080;
+  --highlight-1: #c792ea;
+  --highlight-2: #89ddff;
 }
 
 body {

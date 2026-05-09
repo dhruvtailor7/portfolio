@@ -1,3 +1,0 @@
-interface SideBarProps {
-    selectedActivity?: ActivityId
-}

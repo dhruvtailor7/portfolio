@@ -1,0 +1,76 @@
+import Section from "./Section";
+
+const projects: Project[] = [
+  {
+    name: "StreamFlow",
+    url: "https://github.com/dhruvtailor7/StreamFlow",
+    description: [
+        "• A system that records a RTSP stream in chunks and uploads the clips to a cloud-based storage service.",
+        "• Built the recorder service to capture live RTSP streams, segment the footage into clips, and store metadata in a SQLite database.",
+        "• Implemented an uploader service with event-based triggers along with cron-based retries to process new and failed uploads."
+    ],
+    technologies: [
+       "Node", "SQLite", "MQTT"
+    ]
+  },
+  {
+    name: "AppLogger",
+    url: "https://github.com/TrueSparrowSystems/applogger",
+    description: [
+        "• A debugging tool that captures user actions and application state, helping QA reproduce issues easily.",
+        "• Implemented a web dashboard to present logs and export sessions, reducing turnaround time for debugging.",
+        "• Added session management to group logs by test scenario, improving traceability across complex test flows."
+    ],
+    technologies: [
+       "React Native"
+    ]
+  }
+]
+
+export default function Projects() {
+    return (
+        <Section>
+            <div className="uppercase text-xs text-(--highlight-2)" >
+                Featured Projects
+            </div>
+
+            <h2 className="text-5xl font-(family-name:--font-cabin-sketch) font-extrabold">
+                <span>Things I've built</span>
+            </h2>
+
+            <p className="max-w-140 text-(--muted-foreground)">A selection of projects that showcase different aspects of my engineering work.</p>
+
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,320px))] gap-6 mt-8">
+                {
+                    projects.map((project, idx) => <Project key={idx} project={project}/>)
+                }
+            </div>
+        </Section>
+    )
+}
+
+function Project({project}: ProjectProps) {
+    return (
+        <a href={project.url} target="_blank" rel="noopener noreferrer" className="hover:border hover:border-(--highlight-2) transition duration-300 hover:-translate-y-2 pointer-auto px-6 py-10 border border-(--border) bg-(--surface) rounded-3xl flex flex-col gap-3">
+            <p className="text-(--foreground) font-extrabold text-lg leading-none">
+                {project.name}
+            </p>
+
+            <ul className="text-(--muted-foreground) font-medium text-sm">
+                {project.description.map((itm: string, idx: number) => <li key={idx}>{itm}</li>)}
+            </ul>
+
+            <div className="flex gap-2 flex-wrap">
+                {
+                    project.technologies.map((itm, idx) => {
+                        return (
+                            <div key={idx} className="px-2 py-1 text-xs border border-(--border) bg-(--surface-elevated) rounded-md">
+                                {itm}
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </a>
+    )
+}

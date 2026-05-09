@@ -23,8 +23,10 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
             return [...files, file]
         })
 
-        setActiveFile((current) => current ?? file.name )
-    }, [])
+        if(file.name !== activeFile) {
+            setActiveFile(file.name)
+        }
+    }, [activeFile])
 
     const closeFile = useCallback((file: FileNode) => {
         setOpenFiles((files) => {

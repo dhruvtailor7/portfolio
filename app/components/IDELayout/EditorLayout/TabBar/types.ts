@@ -1,4 +1,4 @@
-interface TabProps {
+type TabProps = {
     file: FileNode,
     icon: string,
     isSelected?: boolean

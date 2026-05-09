@@ -1,7 +1,7 @@
 import useIDEContext from "@/app/hooks/useIDEContext";
 import ActivityFactory from "./Activities/Factory";
 
-export default function SideBar(props: SideBarProps) {
+export default function SideBar() {
     const {selectedActivity} = useIDEContext();
 
     return (

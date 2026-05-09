@@ -1,0 +1,3 @@
+type TextFileProps = {
+    content: string[]
+}

@@ -1,7 +1,7 @@
 import useIDEContext from "@/app/hooks/useIDEContext";
 import { activities } from "@/app/lib/constants";
 
-export default function ActivityBar(props: ActivityBarProps) {
+export default function ActivityBar() {
 
     const {selectedActivity} = useIDEContext();
 

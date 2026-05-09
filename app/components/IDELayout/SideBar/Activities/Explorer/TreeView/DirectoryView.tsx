@@ -20,7 +20,7 @@ export default function FolderView({directory, level}: DirectoryViewProps) {
                             isExpanded ? 'codicon-chevron-down' : 'codicon-chevron-right'
                         } leading-none`}
                     />
-                    <span className="flex-1 text-start">{directory.name}</span>
+                    <span className={`flex-1 text-start ${level == 0 ? 'font-extrabold tracking-wide uppercase' : 'font-semibold'}`}>{directory.name}</span>
                 </div>
             </button>
             {

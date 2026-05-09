@@ -1,71 +1,73 @@
-export const globalConstants = {
-    firstName: "Dhruv",
-    lastName: "Tailor"
+export const myData = {
+  personal: {
+    name: {
+      first: "dhruv",
+      last: "tailor"
+    },
+    email: "dhruvtailor7@gmail.com",
+  },
+
+  professional: {
+    designation: "senior software engineer",
+    resumeLink: "https://drive.google.com/file/d/1aYdsed5ayTdQyB3eRxic5I66L0dmv9Wv/view"
+  },
+
+  location: {
+    city: "surat",
+    state: "gujarat",
+    country: "india",
+  },
+
+  social: {
+    github: 'https://github.com/dhruvtailor7',
+    linkedin: 'https://www.linkedin.com/in/dhruv-tailor-3b0164171'
+  },
 }
 
 export const treeData: TreeData = [
     {
         name: 'my-portfolio',
         type: 'directory',
+        path: '/',
         children: [
             {
                 name: 'src',
                 type: 'directory',
-                parent: 'my-portfolio',
+                path: '/my-portfolio',
                 children: [
                     {
                         name: 'portfolio.tsx',
                         type: 'file',
-                        parent: 'src'
+                        path: '/my-portfolio/src'
                     },
-                    {
-                        name: 'contact.md',
-                        type: 'file',
-                        parent: 'src'
-                    },
-                    {
-                        name: 'guestbook.md',
-                        type: 'file',
-                        parent: 'src'
-                    }
+                    // {
+                    //     name: 'guestbook.md',
+                    //     type: 'file',
+                    //     path: '/my-portfolio/src'
+                    // }
                 ]
             },
             {
-                name: 'components',
+                name: 'styles',
                 type: 'directory',
-                parent: 'my-portfolio',
+                path: '/my-portfolio',
                 children: [
                     {
-                        name: 'Hero.tsx',
+                        name: 'themes.css',
                         type: 'file',
-                        parent: 'components'
+                        path: '/my-portfolio/styles'
                     },
-                    {
-                        name: 'Skills.tsx',
-                        type: 'file',
-                        parent: 'components'
-                    },
-                    {
-                        name: 'Projects.tsx',
-                        type: 'file',
-                        parent: 'components'
-                    }
                 ]
             },
-            {
-                name: 'package.json',
-                type: 'file',
-                parent: 'my-portfolio'
-            },
-            {
-                name: 'tsconfig.json',
-                type: 'file',
-                parent: 'my-portfolio'
-            },
+            // {
+            //     name: 'package.json',
+            //     type: 'file',
+            //     path: '/my-portfolio'
+            // },
             {
                 name: '.gitignore',
                 type: 'file',
-                parent: 'my-portfolio'
+                path: '/my-portfolio'
             },
         ]
     }

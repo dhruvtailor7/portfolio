@@ -1,6 +1,6 @@
 type BaseNode = {
     name: string
-    parent?: string
+    path?: string
 }
 
 type FileNode = BaseNode & {
