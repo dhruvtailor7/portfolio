@@ -1,27 +1,19 @@
-const content = [
-    "# the rest is working as intended",
-    "bugs/",
-    "",
-    "# Secrets must not be shared",
-    ".env",
-    "",
-    "# never opened, but still relevant",
-    "!mistakes/"
-]
+type TextFileProps = {
+  content: string[];
+};
 
-export default function TextFile({content}: TextFileProps) {
-    return (
-        <div className="px-3 py-3">
-            {
-                content.map((text, idx) => {
-                    return (
-                        <div key={`${text}-${idx}`} className="flex">
-                            <span className="w-12 text-right text-(--muted-foreground)">{idx + 1}</span>
-                            <span className="pl-3 text-(--foreground) whitespace-pre">{text}</span>
-                        </div>
-                    )
-                })
-            }
+export default function TextFile({ content }: TextFileProps) {
+  return (
+    <pre className="px-3 py-3 bg-(--background) rounded overflow-x-auto">
+      {content.map((line, idx) => (
+        <div key={idx} className="flex">
+          <span className="w-12 text-right text-(--muted-foreground) select-none">
+            {idx + 1}
+          </span>
+
+          <span className="pl-3 text-(--foreground)">{line}</span>
         </div>
-    )
+      ))}
+    </pre>
+  );
 }

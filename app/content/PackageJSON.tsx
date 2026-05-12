@@ -33,7 +33,7 @@ const content = [
   '}'
 ];
 
-export default function GitIgnore() {
+export default function PackageJson() {
     return (
         <TextFile content={content} />
     )
