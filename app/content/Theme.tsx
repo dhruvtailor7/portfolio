@@ -7,6 +7,7 @@ const content = [
     "  --surface-elevated: #2d2d30;",
     "  --border: #3e3e42;",
     "  --accent: #007acc;",
+    "  --accent-elevated: #1f8ad2;",
     "  --foreground: #d4d4d4;",
     "  --muted-foreground: #808080;",
     "  --highlight-1: #c792ea;",
