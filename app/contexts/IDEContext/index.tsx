@@ -1,9 +1,12 @@
 "use client"
 
-import { createContext, useCallback, useState } from "react"
+import { createContext, useCallback, useMemo, useState } from "react"
 import { IDEContextType } from "./types"
+import { findFileByPath } from "@/app/lib/fileHelper"
+import { treeData } from "@/app/lib/constants"
 
 const DEFAULT_SELECTED_ACTIVITY = 'explorer'
+const ENTRY_FILE = "/my-portfolio/src/portfolio.tsx"
 
 export const IDEContext = createContext<IDEContextType | null>(null)
 
@@ -11,8 +14,10 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
     const [selectedActivity, setSelectedActivity] =
         useState<IDEContextType['selectedActivity']>(DEFAULT_SELECTED_ACTIVITY)
 
-    const [openFiles, setOpenFiles] = useState<IDEContextType['openFiles']>([])
-    const [activeFile, setActiveFile] = useState<IDEContextType['activeFile']>()
+    const entryFile = useMemo(() => findFileByPath(treeData, ENTRY_FILE), [])
+
+    const [openFiles, setOpenFiles] = useState<IDEContextType['openFiles']>(entryFile ? [entryFile] : [])
+    const [activeFile, setActiveFile] = useState<IDEContextType['activeFile']>(entryFile?.path)
 
     const openFile = useCallback((file: FileNode) => {
         setOpenFiles((files) => {
