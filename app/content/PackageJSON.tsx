@@ -1,4 +1,4 @@
-import TextFile from "./TextFile"
+import TextFile from "../components/TextFile"
 import packageJson from '../../package.json';
 
 const content = [
@@ -33,7 +33,7 @@ const content = [
   '}'
 ];
 
-export default function GitIgnore() {
+export default function PackageJson() {
     return (
         <TextFile content={content} />
     )

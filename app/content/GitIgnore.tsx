@@ -1,4 +1,4 @@
-import TextFile from "./TextFile"
+import TextFile from "../components/TextFile"
 
 const content = [
     "# the rest is working as intended",
