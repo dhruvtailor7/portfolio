@@ -1,4 +1,4 @@
-import TextFile from "./TextFile"
+import TextFile from "../components/TextFile"
 import packageJson from '../../package.json';
 
 const content = [
