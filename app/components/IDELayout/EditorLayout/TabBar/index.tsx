@@ -9,7 +9,7 @@ export default function TabBar() {
         <div className="overflow-x-auto overflow-y-hidden whitespace-nowrap flex-shrink-0 overscroll-none no-scrollbar min-w-0 h-8 flex bg-(--surface)">
             {
                 openFiles.map(
-                    (file) => <Tab key={file.name} file={file} icon={'file'} isSelected={activeFile === file.name} />
+                    (file) => <Tab key={file.name} file={file} icon={'file'} isSelected={activeFile === file.path} />
                 )
             }
         </div>

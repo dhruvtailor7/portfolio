@@ -11,7 +11,7 @@ export default function Tab({
     const { setActiveFile, closeFile } = useIDEContext()
 
     const onTabClick = useCallback(() => {
-        setActiveFile(file.name)
+        setActiveFile(file.path)
         onClick?.(file)
     }, [file, setActiveFile, onClick])
 

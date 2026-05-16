@@ -16,46 +16,50 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
 
     const openFile = useCallback((file: FileNode) => {
         setOpenFiles((files) => {
-            const exists = files.some((f) => f.name === file.name)
-
+            const exists = files.some((f) => f.path === file.path)
             if (exists) return files
-
             return [...files, file]
         })
 
-        if(file.name !== activeFile) {
-            setActiveFile(file.name)
-        }
-    }, [activeFile])
+        setActiveFile(file.path)
+    }, [])
 
     const closeFile = useCallback((file: FileNode) => {
         setOpenFiles((files) => {
-            const index = files.findIndex((f) => f.name === file.name)
+            const index = files.findIndex((f) => f.path === file.path)
             if (index === -1) return files
 
-            const newFiles = files.filter((f) => f.name !== file.name)
+            const newFiles = files.filter((f) => f.path !== file.path)
 
             setActiveFile((current) => {
-                if (current !== file.name) return current
+                if (current !== file.path) return current
 
-                if (newFiles.length === 0) return
+                if (newFiles.length === 0) return undefined
 
                 const nextFile = newFiles[index] || newFiles[index - 1]
-                return nextFile?.name
+
+                return nextFile?.path
             })
 
             return newFiles
         })
     }, [])
 
-    return <IDEContext.Provider value={{
-        selectedActivity, setSelectedActivity,
-        openFiles, setOpenFiles,
-        activeFile, setActiveFile,
+    return (
+        <IDEContext.Provider value={{
+            selectedActivity,
+            setSelectedActivity,
 
-        openFile, closeFile
-    }}
-    >
-        {children}
-    </IDEContext.Provider>
+            openFiles,
+            setOpenFiles,
+
+            activeFile,
+            setActiveFile,
+
+            openFile,
+            closeFile
+        }}>
+            {children}
+        </IDEContext.Provider>
+    )
 }

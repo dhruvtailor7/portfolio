@@ -7,8 +7,8 @@ export type IDEContextType = {
     openFiles: FileNode[]
     setOpenFiles: Dispatch<SetStateAction<FileNode[]>>
 
-    activeFile?: FileNode['name']
-    setActiveFile: Dispatch<SetStateAction<FileNode['name'] | undefined>>
+    activeFile?: FileNode['path']
+    setActiveFile: Dispatch<SetStateAction<FileNode['path'] | undefined>>
 
     openFile: (file: FileNode) => void
     closeFile: (file: FileNode) => void

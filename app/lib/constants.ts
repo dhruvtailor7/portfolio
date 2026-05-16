@@ -28,47 +28,42 @@ export const treeData: TreeData = [
     {
         name: 'my-portfolio',
         type: 'directory',
-        path: '/',
+        path: '/my-portfolio',
         children: [
             {
                 name: 'src',
                 type: 'directory',
-                path: '/my-portfolio',
+                path: '/my-portfolio/src',
                 children: [
                     {
                         name: 'portfolio.tsx',
                         type: 'file',
-                        path: '/my-portfolio/src'
-                    },
-                    // {
-                    //     name: 'guestbook.md',
-                    //     type: 'file',
-                    //     path: '/my-portfolio/src'
-                    // }
+                        path: '/my-portfolio/src/portfolio.tsx'
+                    }
                 ]
             },
             {
                 name: 'styles',
                 type: 'directory',
-                path: '/my-portfolio',
+                path: '/my-portfolio/styles',
                 children: [
                     {
                         name: 'themes.css',
                         type: 'file',
-                        path: '/my-portfolio/styles'
-                    },
+                        path: '/my-portfolio/styles/themes.css'
+                    }
                 ]
             },
             // {
             //     name: 'package.json',
             //     type: 'file',
-            //     path: '/my-portfolio'
+            //     path: '/my-portfolio/package.json'
             // },
             {
                 name: '.gitignore',
                 type: 'file',
-                path: '/my-portfolio'
-            },
+                path: '/my-portfolio/.gitignore'
+            }
         ]
     }
 ]
