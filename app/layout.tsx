@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Cabin_Sketch, JetBrains_Mono } from "next/font/google";
 import "./styles/globals.css";
+import { myData } from "@/app/lib/constants"
+
+const {
+    personal,
+    site,
+} = myData
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -13,11 +19,44 @@ const cabinetGrotesk = Cabin_Sketch({
   subsets: ["latin"]
 });
 
-
 export const metadata: Metadata = {
-  title: "Dhruv Tailor",
-  description: "",
-};
+    title: site.title,
+    description: site.description,
+    keywords: site.keywords,
+    authors: [
+        {
+            name: personal.name.full,
+            url: site.url,
+        },
+    ],
+    creator: personal.name.full,
+    metadataBase: new URL(site.url),
+    alternates: {
+        canonical: "/",
+    },
+    openGraph: {
+        title: site.title,
+        description: site.description,
+        url: site.url,
+        siteName: personal.name.full,
+        locale: "en_IN",
+        type: "website",
+        images: [
+            {
+                url: site.ogImage,
+                width: 1200,
+                height: 630,
+                alt: site.title,
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: site.title,
+        description: site.description,
+        images: [site.ogImage],
+    },
+}
 
 export default function RootLayout({
   children,

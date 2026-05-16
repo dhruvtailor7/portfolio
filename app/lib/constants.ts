@@ -1,27 +1,53 @@
+import { siteUrl } from "./config"
+
 export const myData = {
-  personal: {
-    name: {
-      first: "dhruv",
-      last: "tailor"
+    personal: {
+        name: {
+            first: "Dhruv",
+            last: "Tailor",
+            full: "Dhruv Tailor",
+        },
+        email: "dhruvtailor7@gmail.com",
     },
-    email: "dhruvtailor7@gmail.com",
-  },
 
-  professional: {
-    designation: "senior software engineer",
-    resumeLink: "https://drive.google.com/file/d/1aYdsed5ayTdQyB3eRxic5I66L0dmv9Wv/view"
-  },
+    professional: {
+        designation: "Senior Software Engineer",
+        experience: 5,
+        resumeLink:
+            "https://drive.google.com/file/d/1aYdsed5ayTdQyB3eRxic5I66L0dmv9Wv/view",
+    },
 
-  location: {
-    city: "surat",
-    state: "gujarat",
-    country: "india",
-  },
+    location: {
+        city: "Surat",
+        state: "Gujarat",
+        country: "India",
+    },
 
-  social: {
-    github: 'https://github.com/dhruvtailor7',
-    linkedin: 'https://www.linkedin.com/in/dhruv-tailor-3b0164171'
-  },
+    social: {
+        github: "https://github.com/dhruvtailor7",
+        linkedin: "https://www.linkedin.com/in/dhruv-tailor-3b0164171",
+    },
+
+    site: {
+        url: siteUrl,
+        ogImage: "/og-image.png",
+        title: "Dhruv Tailor — Senior Software Engineer",
+        description:
+            "Senior Software Engineer with 5+ years of experience in backend APIs, AWS infrastructure, and React Native mobile apps.",
+        keywords: [
+            "Dhruv Tailor",
+            "Software Engineer",
+            "React Native",
+            "Node.js",
+            "AWS",
+            "Terraform",
+            "PostgreSQL",
+            "Backend Developer",
+            "Mobile Developer",
+            "Surat",
+            "India",
+        ],
+    },
 }
 
 export const treeData: TreeData = [
