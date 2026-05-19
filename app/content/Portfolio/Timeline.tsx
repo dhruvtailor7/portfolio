@@ -41,7 +41,7 @@ export default function Timeline() {
       </div>
 
       <h2 className="text-5xl font-(family-name:--font-cabin-sketch) font-extrabold">
-        <span>Where I've worked</span>
+        <span>Where I&apos;ve worked</span>
       </h2>
 
       <div className="flex flex-col mt-8">
@@ -57,18 +57,29 @@ function Experience({ experience }: ExperienceProps) {
   return (
     <div className="flex gap-8 last:[&>div]:pb-0">
       <div className="relative flex flex-col items-center">
-        <div className="absolute top-3 w-2 h-2 rounded-full bg-(--highlight-2)" />
+        <div className={`absolute w-2 h-2 rounded-full bg-(--highlight-2)
+          /* Desktop */
+          md:top-3
+          /* Mobile */
+          top-2
+          `} />
         <div className="w-px h-full bg-(--border)" />
       </div>
 
-      <div className="flex flex-col grow pb-10 gap-1">
-        <div className="flex justify-between items-center">
-          <p className="text-(--foreground) font-bold text-lg leading-none">
+      <div className="flex flex-col grow pb-10 gap-2 md:gap-1">
+        <div className={`
+          flex flex-col md:flex-row items-start md:items-center gap-2 justify-start md:justify-between`}>
+          <p className="text-(--foreground) font-bold leading-none text-lg">
             {experience.company}
           </p>
 
-          <div className="px-4 py-2 border border-(--border) bg-(--surface) rounded-full text-sm leading-none whitespace-nowrap">
-            {experience.period}
+          <div className={`border border-(--border) bg-(--surface) rounded-full leading-none whitespace-nowrap
+            /* Desktop */
+            md:text-sm md:px-4 md:py-2
+            /* Mobile */
+            text-xs px-2 py-1
+            `}>
+              {experience.period}
           </div>
         </div>
 

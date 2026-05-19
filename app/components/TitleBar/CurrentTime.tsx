@@ -3,8 +3,8 @@
 import { RefObject, useEffect, useRef } from "react"
 
 export default function CurrentTime() {
-    const timeRef: RefObject<null|HTMLSpanElement> = useRef(null);
-    const workerRef: RefObject<null|Worker> = useRef(null);
+    const timeRef = useRef<HTMLSpanElement>(null);
+    const workerRef: RefObject<null|Worker> = useRef<Worker>(null);
 
     useEffect(() => {
         const worker = new Worker(

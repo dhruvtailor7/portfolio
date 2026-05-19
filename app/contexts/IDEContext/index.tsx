@@ -19,6 +19,9 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
     const [openFiles, setOpenFiles] = useState<IDEContextType['openFiles']>(entryFile ? [entryFile] : [])
     const [activeFile, setActiveFile] = useState<IDEContextType['activeFile']>(entryFile?.path)
 
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const toggleSidebar = useCallback(() => setSidebarOpen(prev => !prev), []);
+
     const openFile = useCallback((file: FileNode) => {
         setOpenFiles((files) => {
             const exists = files.some((f) => f.path === file.path)
@@ -62,7 +65,10 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
             setActiveFile,
 
             openFile,
-            closeFile
+            closeFile,
+
+            sidebarOpen,
+            toggleSidebar,
         }}>
             {children}
         </IDEContext.Provider>

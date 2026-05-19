@@ -12,7 +12,7 @@ export default function Intro() {
                 <br/>
                 <span className="text-(--highlight-2) capitalize">{myData.personal.name.last}</span>
             </h1>
-            <p className="max-w-140 leading-7 font-semibold text-(--muted-foreground)">
+            <p className="max-w-lg leading-7 font-semibold text-(--muted-foreground)">
                 <span className="text-(--foreground)">Full-stack engineer</span> with <span className="text-(--foreground)">5+ years of experience</span> building and maintaining products across the stack — <span className="text-(--foreground)">mobile apps, backend APIs, cloud infrastructure</span>, and everything in between.
             </p>
 

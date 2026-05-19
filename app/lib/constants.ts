@@ -26,6 +26,7 @@ export const myData = {
     social: {
         github: "https://github.com/dhruvtailor7",
         linkedin: "https://www.linkedin.com/in/dhruv-tailor-3b0164171",
+        leetcode: "https://leetcode.com/dhruvtailor7/",
     },
 
     site: {

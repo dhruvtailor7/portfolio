@@ -1,5 +1,7 @@
 export default function AppName() {
-    return <div>
-        Dhruv Tailor — Portfolio
-    </div>
+    return (
+        <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+            Dhruv Tailor
+        </div>
+    )
 }
