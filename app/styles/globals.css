@@ -18,8 +18,15 @@
 }
 
 body {
+  font-size: 14px;
   font-family: var(--font-jetbrains-mono, sans-serif); /* Use the CSS variable for font */
   color: var(--foreground);
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 @layer utilities {

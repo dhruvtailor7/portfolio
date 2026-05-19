@@ -35,12 +35,12 @@ export default function Projects() {
             </div>
 
             <h2 className="text-5xl font-(family-name:--font-cabin-sketch) font-extrabold">
-                <span>Things I've built</span>
+                <span>Things I&apos;ve built</span>
             </h2>
 
-            <p className="max-w-140 text-(--muted-foreground)">A selection of projects that showcase different aspects of my engineering work.</p>
+            <p className="max-w-lg text-(--muted-foreground)">A selection of projects that showcase different aspects of my engineering work.</p>
 
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,320px))] gap-6 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 mt-8">
                 {
                     projects.map((project, idx) => <Project key={idx} project={project}/>)
                 }

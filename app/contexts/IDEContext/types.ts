@@ -12,4 +12,7 @@ export type IDEContextType = {
 
     openFile: (file: FileNode) => void
     closeFile: (file: FileNode) => void
+
+    sidebarOpen: boolean
+    toggleSidebar: () => void
 }
