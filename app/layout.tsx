@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Cabin_Sketch, JetBrains_Mono } from "next/font/google";
 import "./styles/globals.css";
 import { myData } from "@/app/lib/constants"
+import { Analytics } from '@vercel/analytics/next';
+import { isPreview } from "./lib/config";
 
 const {
     personal,
@@ -68,7 +70,10 @@ export default function RootLayout({
       lang="en"
       className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased`} 
     >
-      <body className="h-full overflow-hidden">{children}</body>
+      <body className="h-full overflow-hidden">
+        {children}
+        {!isPreview && <Analytics />}
+      </body>
     </html>
   );
 }
