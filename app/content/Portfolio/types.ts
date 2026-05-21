@@ -18,6 +18,7 @@ type Project = {
 
 type ProjectProps = {
     project: Project
+    idx: number
 }
 
 type SectionProps = React.PropsWithChildren<{
