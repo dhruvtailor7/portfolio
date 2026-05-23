@@ -1,7 +1,5 @@
 import { myData } from "@/app/lib/constants";
 import Section from "./Section";
-import Image from "next/image";
-import meImage from "@/public/images/me.jpeg";
 
 export default function Intro() {
     return (
@@ -29,9 +27,6 @@ export default function Intro() {
                         <span>Open to work</span>
                     </div>
                 </div>
-            </div>
-            <div className="flex flex-1 justify-center items-center">
-                <Image src={meImage} alt="Me" width={300} height={300} className="rounded-full" />
             </div>
         </Section>
     )

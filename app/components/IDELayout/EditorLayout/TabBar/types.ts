@@ -1,6 +1,6 @@
 type TabProps = {
     file: FileNode,
-    icon: string,
+    Icon: React.ElementType,
     isSelected?: boolean
     onClick?: (file: FileNode) => void
     onClose?: (file: FileNode) => void

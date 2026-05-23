@@ -1,5 +1,7 @@
 import { useState, useCallback } from "react"
 import TreeView from ".";
+import FolderOpenIcon from "@/app/components/icons/FolderOpenIcon";
+import FolderIcon from "@/app/components/icons/FolderIcon";
 
 export default function FolderView({directory, level}: DirectoryViewProps) {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -20,7 +22,12 @@ export default function FolderView({directory, level}: DirectoryViewProps) {
                             isExpanded ? 'codicon-chevron-down' : 'codicon-chevron-right'
                         } leading-none`}
                     />
-                    <span className={`flex-1 text-start ${level == 0 ? 'font-extrabold tracking-wide uppercase' : 'font-semibold'}`}>{directory.name}</span>
+                    <div className="flex items-center gap-1">
+                        {
+                            isExpanded ? <FolderOpenIcon size={16} /> : <FolderIcon size={16} />
+                        }
+                        <span className={`flex-1 text-start ${level == 0 ? 'font-extrabold tracking-wide uppercase' : 'font-semibold'}`}>{directory.name}</span>
+                    </div>
                 </div>
             </button>
             {

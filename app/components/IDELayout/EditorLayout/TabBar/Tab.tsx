@@ -3,7 +3,7 @@ import { MouseEvent, useCallback } from "react"
 
 export default function Tab({
     file,
-    icon,
+    Icon,
     isSelected = true,
     onClick,
     onClose
@@ -35,14 +35,8 @@ export default function Tab({
                 border-r border-[var(--border)]
             `}
         >
-            <div className="flex items-center">
-                <span
-                    className={`
-                        flex items-center justify-center px-0.5
-                        codicon codicon-${icon} !text-sm
-                    `}
-                />
-
+            <div className="flex items-center gap-1">
+                <Icon size={16} />
                 <span className="text-xs font-medium">
                     {file.name}
                 </span>
