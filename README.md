@@ -20,7 +20,7 @@ The entire portfolio is wrapped in a VS Code shell:
 | UI | React 19 |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
-| Icons | `@vscode/codicons`, `react-icons` |
+| Icons | `@vscode/codicons` |
 | Fonts | JetBrains Mono, Cabin Sketch (Google Fonts) |
 | Analytics | Vercel Analytics |
 
