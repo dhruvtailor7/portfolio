@@ -1,6 +1,7 @@
 import useIDEContext from "@/app/hooks/useIDEContext";
 import { activities } from "@/app/lib/constants";
 import { useCallback } from "react";
+import type { ActivityId } from "./types";
 
 export default function ActivityBar() {
 

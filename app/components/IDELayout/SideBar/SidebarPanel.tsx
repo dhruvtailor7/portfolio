@@ -2,7 +2,7 @@ import useIDEContext from "@/app/hooks/useIDEContext"
 import ActivityFactory from "./Activities/Factory"
 
 export default function SidebarPanel() {
-    const {sidebarOpen, selectedActivity, toggleSidebar} = useIDEContext()
+    const {sidebarOpen, selectedActivity} = useIDEContext()
     
     return (
         <div className={`

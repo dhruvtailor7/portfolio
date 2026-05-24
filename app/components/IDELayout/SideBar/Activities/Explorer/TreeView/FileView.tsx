@@ -1,8 +1,8 @@
 import useIDEContext from "@/app/hooks/useIDEContext"
 import { checkIsMobile } from "@/app/lib/breakpoint"
 import { useCallback, useMemo } from "react"
-import File from "@/app/components/icons/FileIcon";
 import { getFileIcon } from "@/app/lib/fileHelper";
+import type { FileViewProps } from "./types";
 
 export default function FileView({file, level = 0}: FileViewProps) {
     const {activeFile, openFile, toggleSidebar} = useIDEContext()

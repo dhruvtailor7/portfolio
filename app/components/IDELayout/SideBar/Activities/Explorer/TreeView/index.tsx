@@ -1,5 +1,6 @@
 import FileView from "./FileView"
 import DirectoryView from "./DirectoryView"
+import type { TreeViewProps } from "./types"
 
 export default function TreeView({data, level}: TreeViewProps) {
     return (

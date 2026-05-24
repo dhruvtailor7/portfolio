@@ -3,30 +3,30 @@ type BaseNode = {
     path?: string
 }
 
-type FileNode = BaseNode & {
+export type FileNode = BaseNode & {
     type: 'file'
 }
 
-type DirectoryNode = BaseNode & {
+export type DirectoryNode = BaseNode & {
     type: 'directory'
     children?: TreeNode[]
 }
 
-type TreeNode = FileNode | DirectoryNode
+export type TreeNode = FileNode | DirectoryNode
 
-type TreeData = TreeNode[]
+export type TreeData = TreeNode[]
 
-type TreeViewProps = {
+export type TreeViewProps = {
     data: TreeData
     level: number
 }
 
-type FileViewProps = {
+export type FileViewProps = {
     file: FileNode
     level: number
 }
 
-type DirectoryViewProps = {
+export type DirectoryViewProps = {
     directory: DirectoryNode
     level: number
 }

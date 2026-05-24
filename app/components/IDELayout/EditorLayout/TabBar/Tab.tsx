@@ -1,5 +1,6 @@
 import useIDEContext from "@/app/hooks/useIDEContext"
 import { MouseEvent, useCallback } from "react"
+import type { TabProps } from "./types"
 
 export default function Tab({
     file,
