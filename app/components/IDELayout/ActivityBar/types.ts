@@ -1,6 +1,6 @@
-type ActivityId = 'explorer' | 'search' | 'git' | 'extension'
+export type ActivityId = 'explorer' | 'search' | 'git' | 'extension'
 
-type Activity = {
+export type Activity = {
     id: ActivityId
     title: string
     icon: string

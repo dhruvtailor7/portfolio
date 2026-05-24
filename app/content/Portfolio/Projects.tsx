@@ -1,4 +1,5 @@
 import Section from "./Section";
+import type { Project, ProjectProps } from "./types";
 
 const projects: Project[] = [
   {

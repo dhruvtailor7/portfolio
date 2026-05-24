@@ -1,26 +1,26 @@
-type Experience = {
+export type Experience = {
     company: string
     role: string
     period: string
     description: string[]
 }
 
-type ExperienceProps = {
+export type ExperienceProps = {
     experience: Experience
 }
 
-type Project = {
+export type Project = {
     name: string
     url?: string
     description: string[]
     technologies: string[]
 }
 
-type ProjectProps = {
+export type ProjectProps = {
     project: Project
     idx: number
 }
 
-type SectionProps = React.PropsWithChildren<{
+export type SectionProps = React.PropsWithChildren<{
   styles?: string;
 }>

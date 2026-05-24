@@ -1,4 +1,6 @@
 import {Dispatch, SetStateAction} from "react"
+import type { ActivityId } from "@/app/components/IDELayout/ActivityBar/types"
+import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/Explorer/TreeView/types"
 
 export type IDEContextType = {
     selectedActivity: ActivityId

@@ -2,6 +2,7 @@ import { useState, useCallback } from "react"
 import TreeView from ".";
 import FolderOpenIcon from "@/app/components/icons/FolderOpenIcon";
 import FolderIcon from "@/app/components/icons/FolderIcon";
+import type { DirectoryViewProps } from "./types";
 
 export default function FolderView({directory, level}: DirectoryViewProps) {
     const [isExpanded, setIsExpanded] = useState(false);

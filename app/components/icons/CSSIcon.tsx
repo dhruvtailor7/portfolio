@@ -1,4 +1,4 @@
-export default function CSSIcon({size = 24, color = 'currentColor'}: CSSIconProps) {
+export default function CSSIcon({size = 24}: CSSIconProps) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 32 32" aria-labelledby="css-logo-title css-logo-description">
             <title>CSS Logo</title>
@@ -12,5 +12,4 @@ export default function CSSIcon({size = 24, color = 'currentColor'}: CSSIconProp
 
 type CSSIconProps = {
     size?: number
-    color?: string
 }

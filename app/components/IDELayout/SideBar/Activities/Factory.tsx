@@ -1,5 +1,6 @@
 import Explorer from "./Explorer";
 import Extension from "./Extension";
+import type { ActivityId } from "../../ActivityBar/types";
 
 export default class ActivityFactory {
     static getView(activity?: ActivityId) {

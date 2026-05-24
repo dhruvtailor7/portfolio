@@ -1,6 +1,4 @@
-type TextFileProps = {
-  content: string[];
-};
+import type { TextFileProps } from "./types"
 
 export default function TextFile({ content }: TextFileProps) {
   return (
