@@ -1,3 +1,3 @@
-type PulseProps = {
+export type PulseProps = {
     color?: string
 }

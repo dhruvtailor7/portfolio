@@ -1,6 +1,8 @@
-type TabProps = {
+import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/Explorer/TreeView/types"
+
+export type TabProps = {
     file: FileNode,
-    icon: string,
+    Icon: React.ElementType,
     isSelected?: boolean
     onClick?: (file: FileNode) => void
     onClose?: (file: FileNode) => void

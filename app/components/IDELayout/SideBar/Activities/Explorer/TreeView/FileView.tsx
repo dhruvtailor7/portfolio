@@ -1,6 +1,8 @@
 import useIDEContext from "@/app/hooks/useIDEContext"
 import { checkIsMobile } from "@/app/lib/breakpoint"
 import { useCallback, useMemo } from "react"
+import { getFileIcon } from "@/app/lib/fileHelper";
+import type { FileViewProps } from "./types";
 
 export default function FileView({file, level = 0}: FileViewProps) {
     const {activeFile, openFile, toggleSidebar} = useIDEContext()
@@ -14,14 +16,16 @@ export default function FileView({file, level = 0}: FileViewProps) {
 
     const isActive = useMemo(() => activeFile === file.path, [activeFile, file.path])
 
+    const Icon = useMemo(() => getFileIcon(file), [file]) as React.ElementType
+
     return (
         <div
             onClick={_openFile}
             className={`hover:bg-(--surface-elevated) flex items-center gap-1 py-1 ${isActive ? 'bg-(--surface-elevated)' : ''}`}
             style={{ paddingLeft: `${level * 16}px` }}
         >
-            <span className={`codicon codicon-file ${isActive ? 'text-(--foreground)' : 'text-(--muted-foreground)'}`} />
-            <span>{file.name}</span>
+            <Icon size={16} style={{ flexShrink: 0 }} />
+            <span className="flex-1 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</span>
         </div>
     )
 }

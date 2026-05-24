@@ -1,4 +1,6 @@
 import { siteUrl } from "./config"
+import type { Activity } from "@/app/components/IDELayout/ActivityBar/types"
+import type { TreeData } from "@/app/components/IDELayout/SideBar/Activities/Explorer/TreeView/types"
 
 export const myData = {
     personal: {

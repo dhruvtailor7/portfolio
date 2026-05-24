@@ -1,32 +1,34 @@
 import { myData } from "@/app/lib/constants";
 import Section from "./Section";
-import { MdEmail, MdInsertDriveFile } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import LeetCodeIcon from "@/app/components/icons/LeetCodeIcon";
+import GitHubIcon from "@/app/components/icons/GitHubIcon";
+import LinkedInIcon from "@/app/components/icons/LinkedInIcon";
+import EmailIcon from "@/app/components/icons/EmailIcon";
+import ResumeIcon from "@/app/components/icons/ResumeIcon";
 
 const buttonsData = [
     {
-        icon: <MdEmail />,
+        Icon: EmailIcon,
         title: "Send Email",
         link: `mailto: ${myData.personal.email}`
     },
     {
-        icon: <FaGithub />,
+        Icon: GitHubIcon,
         title: "GitHub",
         link: myData.social.github
     },
     {
-        icon: <FaLinkedin />,
+        Icon: LinkedInIcon,
         title: "LinkedIn",
         link: myData.social.linkedin
     },
     {
-        icon: <SiLeetcode />,
+        Icon: LeetCodeIcon,
         title: "LeetCode",
         link: myData.social.leetcode
     },
     {
-        icon: <MdInsertDriveFile />,
+        Icon: ResumeIcon,
         title: "Resume",
         link: myData.professional.resumeLink
     }
@@ -54,7 +56,7 @@ export default function Contact() {
                     buttonsData.map((data) => {
                         return (
                             <a key={data.title} className="hover:border hover:border-(--highlight-2) transition duration-300 hover:-translate-y-[1px] pointer-auto border rounded-lg border-(--border) bg-(--surface) px-5 py-3 text-sm font-semibold flex items-center gap-2" href={data.link} target="_blank">
-                                <span className="text-base">{data.icon}</span>
+                                <data.Icon size={16} />
                                 <span>{data.title}</span>
                             </a>
                         )

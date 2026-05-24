@@ -1,4 +1,5 @@
 import Section from "./Section";
+import type { Experience, ExperienceProps } from "./types";
 
 const experiences: Experience[] = [
   {
