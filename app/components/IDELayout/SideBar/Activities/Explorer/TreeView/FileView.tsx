@@ -24,8 +24,8 @@ export default function FileView({file, level = 0}: FileViewProps) {
             className={`hover:bg-(--surface-elevated) flex items-center gap-1 py-1 ${isActive ? 'bg-(--surface-elevated)' : ''}`}
             style={{ paddingLeft: `${level * 16}px` }}
         >
-            <Icon size={16} />
-            <span>{file.name}</span>
+            <Icon size={16} style={{ flexShrink: 0 }} />
+            <span className="flex-1 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</span>
         </div>
     )
 }

@@ -1,6 +1,10 @@
-export default function CSSIcon({size = 24}: CSSIconProps) {
+import type { IconProps } from './types'
+
+type CSSIconProps = IconProps
+
+export default function CSSIcon({size = 24, style}: CSSIconProps) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 32 32" aria-labelledby="css-logo-title css-logo-description">
+        <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 32 32" style={style} aria-labelledby="css-logo-title css-logo-description">
             <title>CSS Logo</title>
             <g style={{display: "inline"}}>
                 <path fill="#639" d="M1.995 1.994h23.52a4.48 4.48 0 0 1 4.48 4.48v19.04a4.48 4.48 0 0 1-4.48 4.48H6.475a4.48 4.48 0 0 1-4.48-4.48Z"/>
@@ -8,8 +12,4 @@ export default function CSSIcon({size = 24}: CSSIconProps) {
             </g>
         </svg>
     )
-}
-
-type CSSIconProps = {
-    size?: number
 }
