@@ -1,7 +1,7 @@
 import { treeData } from "@/app/lib/constants"
 import TreeView from "./TreeView"
 
-export default function Explorer() {
+export default function ExplorerView() {
     return (
         <div className="min-h-0 flex flex-col gap-1 text-sm font-medium md:text-xs">
             <h6 className="p-3 text-sm font-mono md:text-xs">EXPLORER</h6>

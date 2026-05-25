@@ -1,0 +1,7 @@
+const akatsukiTheme = {
+    id: "akatsuki",
+    name: "Akatsuki",
+    description: "Blood-red dawn breaking over the horizon",
+}
+
+export default akatsukiTheme

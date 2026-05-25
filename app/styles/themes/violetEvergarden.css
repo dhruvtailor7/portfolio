@@ -1,0 +1,13 @@
+[data-theme="violetEvergarden"] {
+  --background: #0a0d1a;
+  --surface: #0f1225;
+  --surface-elevated: #161930;
+  --border: #25294a;
+  --accent: #7c6dce;
+  --accent-elevated: #9b8de8;
+  --foreground: #e8e6f8;
+  --muted-foreground: #5a5585;
+  --highlight-1: #6ee7b7;
+  --highlight-2: #93c5fd;
+  --highlight-3: #fda4af;
+}

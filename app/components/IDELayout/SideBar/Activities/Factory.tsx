@@ -1,14 +1,14 @@
-import Explorer from "./Explorer";
-import Extension from "./Extension";
+import ExplorerView from "./ExplorerView";
+import ExtensionView from "./ExtensionView";
 import type { ActivityId } from "../../ActivityBar/types";
 
 export default class ActivityFactory {
     static getView(activity?: ActivityId) {
         switch(activity) {
             case 'explorer':
-                return <Explorer />
+                return <ExplorerView />
             case 'extension':
-                return <Extension />
+                return <ExtensionView />
             case undefined:
             default:
                 return <NoActivityView />

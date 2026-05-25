@@ -1,7 +1,7 @@
 import ReactTSIcon from "../components/icons/ReactTSIcon"
 import CSSIcon from "../components/icons/CSSIcon"
 import FileIcon from "../components/icons/FileIcon"
-import type { TreeData, FileNode } from "@/app/components/IDELayout/SideBar/Activities/Explorer/TreeView/types"
+import type { TreeData, FileNode } from "@/app/components/IDELayout/SideBar/Activities/ExplorerView/TreeView/types"
 
 export function findFileByPath(nodes: TreeData, path: string): FileNode | null {
     for (const node of nodes) {

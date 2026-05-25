@@ -4,6 +4,8 @@ import "./styles/globals.css";
 import { myData } from "@/app/lib/constants"
 import { Analytics } from '@vercel/analytics/next';
 import { isPreview } from "./lib/config";
+import QuickPickerDropdown from "./components/QuickPickerDropdown";
+import vscodeDarkTheme from "./lib/themes/vscodeDark";
 
 const {
     personal,
@@ -68,11 +70,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased`} 
+      data-theme={vscodeDarkTheme.id}
+      className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased select-none overflow-hidden`}
     >
       <body className="h-full overflow-hidden">
         {children}
         {!isPreview && <Analytics />}
+        <QuickPickerDropdown />
       </body>
     </html>
   );
