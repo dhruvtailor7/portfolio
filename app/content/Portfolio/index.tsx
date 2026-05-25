@@ -5,7 +5,7 @@ import Timeline from "./Timeline"
 
 export default function Portfolio() {
     return (
-        <div className="overflow-y-auto">
+        <div className="overflow-y-auto select-text">
             <Intro />
             <hr className="text-(--border)" />
             <Timeline />
