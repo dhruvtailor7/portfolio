@@ -1,0 +1,13 @@
+[data-theme="akatsuki"] {
+  --background: #0d0a0a;
+  --surface: #140c0c;
+  --surface-elevated: #1c1010;
+  --border: #3d1515;
+  --accent: #dc2626;
+  --accent-elevated: #ef4444;
+  --foreground: #f5f0f0;
+  --muted-foreground: #7a5a5a;
+  --highlight-1: #f97316;
+  --highlight-2: #a855f7;
+  --highlight-3: #e2e8f0;
+}

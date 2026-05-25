@@ -1,5 +1,5 @@
 import React from "react"
-import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/Explorer/TreeView/types"
+import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/ExplorerView/TreeView/types"
 
 const viewRegistry: Record<string, () => Promise<{default: React.ComponentType}>> = {
     "/my-portfolio/src/portfolio.tsx": () => import("@/app/content/Portfolio"),

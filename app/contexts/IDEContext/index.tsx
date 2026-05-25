@@ -4,7 +4,7 @@ import { createContext, useCallback, useMemo, useState } from "react"
 import { IDEContextType } from "./types"
 import { findFileByPath } from "@/app/lib/fileHelper"
 import { treeData } from "@/app/lib/constants"
-import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/Explorer/TreeView/types"
+import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/ExplorerView/TreeView/types"
 
 const DEFAULT_SELECTED_ACTIVITY = 'explorer'
 const ENTRY_FILE = "/my-portfolio/src/portfolio.tsx"
