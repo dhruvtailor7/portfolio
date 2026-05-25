@@ -51,7 +51,7 @@ export default function QuickPickerDropdown() {
         <dialog
             ref={dialogRef}
             className="
-                mx-auto my-4 w-full max-w-lg flex-col overflow-hidden max-h-[320px]
+                mx-auto my-4 w-[calc(100%-2rem)] max-w-lg flex-col overflow-hidden max-h-[320px]
                 bg-(--surface) text-(--foreground) border border-(--border) rounded-md
                 backdrop:bg-black/50 backdrop:backdrop-blur-[2px]
                 open:flex
@@ -59,6 +59,7 @@ export default function QuickPickerDropdown() {
             onCancel={close}
             onClick={handleBackdropClick}
         >
+            <span tabIndex={-1} autoFocus className="sr-only" />
             <div className="flex flex-row gap-2 items-center px-3 py-2 border-b border-(--border)">
                 <span className="flex-shrink-1 codicon codicon-search"></span>
                 <input
