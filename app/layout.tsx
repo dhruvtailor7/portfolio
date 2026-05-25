@@ -71,7 +71,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme={auroraTheme.id}
-      className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased`}
+      className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased select-none`}
     >
       <body className="h-full overflow-hidden">
         {children}

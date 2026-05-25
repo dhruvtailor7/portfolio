@@ -2,7 +2,7 @@ import type { TextFileProps } from "./types"
 
 export default function TextFile({ content }: TextFileProps) {
   return (
-    <pre className="py-3 h-full bg-(--background) rounded overflow-x-auto overscroll-none no-scrollbar relative">
+    <pre className="py-3 h-full bg-(--background) rounded overflow-x-auto overscroll-none no-scrollbar relative  select-text">
       <div className="min-w-max">
         {content.map((line, idx) => (
           <div key={idx} className="flex">
