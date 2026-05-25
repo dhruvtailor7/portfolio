@@ -1,4 +1,4 @@
-import auroraTheme from "@/app/lib/themes/aurora"
+import vscodeDarkTheme from "@/app/lib/themes/vscodeDark"
 import { Theme } from "./types"
 import { themes } from "@/app/lib/themes"
 export const THEME_STORAGE_KEY = "theme-id"
@@ -13,7 +13,7 @@ class ThemeService {
 
         if (typeof window !== "undefined") {
             const savedThemeId = localStorage.getItem(THEME_STORAGE_KEY) as Theme['id'] | null
-            this.setTheme(savedThemeId && themes[savedThemeId] ? savedThemeId : auroraTheme.id)
+            this.setTheme(savedThemeId && themes[savedThemeId] ? savedThemeId : vscodeDarkTheme.id)
         }
     }
 

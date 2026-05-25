@@ -1,0 +1,13 @@
+[data-theme="akira"] {
+  --background: #080810;
+  --surface: #0d0d1a;
+  --surface-elevated: #131325;
+  --border: #1e1e3f;
+  --accent: #e31a1c;
+  --accent-elevated: #ff2d2f;
+  --foreground: #e8e8f5;
+  --muted-foreground: #4a4a72;
+  --highlight-1: #00d4ff;
+  --highlight-2: #ffcc00;
+  --highlight-3: #cc44ff;
+}

@@ -1,12 +1,13 @@
 @import "tailwindcss";
 @import "@vscode/codicons/dist/codicon.css";
 @import "./animations.css";
-@import "./themes/aurora.css";
-@import "./themes/sakuraNoir.css";
-@import "./themes/akatsuki.css";
-@import "./themes/eclipse.css";
-@import "./themes/obsidian.css";
 @import "./themes/abyssal.css";
+@import "./themes/akatsuki.css";
+@import "./themes/akira.css";
+@import "./themes/attackOnTitan.css";
+@import "./themes/eclipse.css";
+@import "./themes/sakuraNoir.css";
+@import "./themes/violetEvergarden.css";
 @import "./themes/vscodeDark.css";
 
 body {

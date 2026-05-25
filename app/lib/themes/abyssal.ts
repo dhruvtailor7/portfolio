@@ -1,7 +1,7 @@
 const abyssalTheme = {
     id: "abyssal",
     name: "Abyssal",
-    description: "Cold light from the ocean floor",
+    description: "A cold glow rising from the depths of the Abyss",
 }
 
 export default abyssalTheme

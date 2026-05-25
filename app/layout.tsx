@@ -5,7 +5,7 @@ import { myData } from "@/app/lib/constants"
 import { Analytics } from '@vercel/analytics/next';
 import { isPreview } from "./lib/config";
 import QuickPickerDropdown from "./components/QuickPickerDropdown";
-import auroraTheme from "./lib/themes/aurora";
+import vscodeDarkTheme from "./lib/themes/vscodeDark";
 
 const {
     personal,
@@ -70,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme={auroraTheme.id}
+      data-theme={vscodeDarkTheme.id}
       className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased select-none`}
     >
       <body className="h-full overflow-hidden">
