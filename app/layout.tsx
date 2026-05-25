@@ -71,7 +71,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme={vscodeDarkTheme.id}
-      className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased select-none`}
+      className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased select-none overflow-hidden`}
     >
       <body className="h-full overflow-hidden">
         {children}

@@ -12,7 +12,7 @@ export default function QuickPickerDropdown() {
     const dialogRef = useRef<HTMLDialogElement>(null)
 
     const open = useCallback(() => {
-        setCurrentThemeId(ThemeService.getCurrentTheme())
+        setCurrentThemeId(ThemeService.getCurrentThemeId())
         setSearchQuery('')
         dialogRef.current?.showModal()
     }, [])
