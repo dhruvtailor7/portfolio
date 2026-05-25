@@ -1,8 +1,9 @@
 import LiveViewerCount from "./LiveViwerCount"
+import ThemeSwitcher from "./ThemeSwitcher"
 
 export default function StatusBar() {
     return (
-        <div className={`flex-shrink-0 overflow-visible flex flex-row border-t border-(--border) justify-between items-center-safe text-xs font-semibold bg-[var(--accent)]
+        <div className={`flex-shrink-0 max-h-[22px] flex flex-row border-t border-(--border) justify-between items-center-safe text-xs font-semibold bg-[var(--accent)]
             /* Desktop */
             md:px-2
         `}>
@@ -14,12 +15,8 @@ export default function StatusBar() {
                 <div className="flex flex-row gap-1"><span className="codicon codicon-warning"/>0</div>
               </div>
             </div>
-            <div className={`flex flex-row gap-3 px-2 py-0.75
-                /* Desktop */
-                md:px-2
-                /* Mobile */
-                px-1 py-0.5
-            `}>
+            <div className="flex flex-row justify-stretch gap-1 px-2">
+              <ThemeSwitcher />
               <LiveViewerCount />
             </div>
         </div>

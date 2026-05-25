@@ -1,6 +1,6 @@
 "use client"
 
-import ActivityBar from "./ActivityBar";
+import ActivityBar from "./ActivityBar/ActivityBarPanel";
 import SideBar from "./SideBar";
 import Editor from "./EditorLayout";
 

@@ -1,8 +1,7 @@
 const eclipseTheme = {
     id: "eclipse",
     name: "Eclipse",
-    description: "The moment the sun is swallowed by the moon",
-    accent: "#f59e0b",
+    description: "The moment Griffith's dream consumed everything",
 }
 
 export default eclipseTheme

@@ -1,0 +1,13 @@
+[data-theme="attackOnTitan"] {
+  --background: #07090e;
+  --surface: #0c1018;
+  --surface-elevated: #111820;
+  --border: #1c2530;
+  --accent: #5b8fa8;
+  --accent-elevated: #78adc5;
+  --foreground: #c5cfd8;
+  --muted-foreground: #435262;
+  --highlight-1: #7a9b6e;
+  --highlight-2: #c87a3e;
+  --highlight-3: #9e8c78;
+}
