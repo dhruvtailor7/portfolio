@@ -1,4 +1,4 @@
-import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/Explorer/TreeView/types"
+import type { FileNode } from "@/app/components/IDELayout/SideBar/Activities/ExplorerView/TreeView/types"
 
 export type TabProps = {
     file: FileNode,

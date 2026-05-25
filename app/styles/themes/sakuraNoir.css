@@ -1,0 +1,13 @@
+[data-theme="sakuraNoir"] {
+  --background: #1a0e16;
+  --surface: #231520;
+  --surface-elevated: #2e1d2b;
+  --border: #4a2d42;
+  --accent: #f472b6;
+  --accent-elevated: #f9a8d4;
+  --foreground: #fce7f3;
+  --muted-foreground: #9d7a8d;
+  --highlight-1: #c084fc;
+  --highlight-2: #67e8f9;
+  --highlight-3: #86efac;
+}

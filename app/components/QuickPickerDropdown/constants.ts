@@ -1,0 +1,1 @@
+export const QuickPickerOpenEvent = 'quick-picker-open'
