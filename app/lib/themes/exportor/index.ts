@@ -3,7 +3,7 @@ import { themes } from ".."
 import { contentTypesXml, manifestXml, pkg, data, readme } from "./metadata"
 import { readThemeColors } from "./colorReader"
 import { buildThemeJson } from "./themeBuilder"
-import { buildIconSvg, svgToPng } from "./icon"
+import { buildIconSvg, svgToPng } from "./iconBuilder"
 
 export async function exportThemes() {
     const iconBytes = await svgToPng(buildIconSvg())
