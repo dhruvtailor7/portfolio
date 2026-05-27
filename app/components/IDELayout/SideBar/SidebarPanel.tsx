@@ -87,7 +87,7 @@ export default function SidebarPanel() {
             >
                 {ActivityFactory.getView(selectedActivity)}
             </div>
-            <div
+            {sidebarOpen && <div
                 onMouseDown={handleResizeStart}
                 className={`
                     absolute top-0 bottom-0 w-1 z-10
@@ -99,7 +99,7 @@ export default function SidebarPanel() {
                     width: `${HANDLE_WIDTH}px`,
                     cursor: getResizeCursor(width),
                 }}
-            />
+            />}
         </div>
     )
 }
