@@ -1,0 +1,13 @@
+[data-theme="ouroboros"] {
+  --background: #0a0a0c;
+  --surface: #111115;
+  --surface-elevated: #18181e;
+  --border: #2a2a35;
+  --accent: #f4b400;
+  --accent-elevated: #ffca28;
+  --foreground: #f0eedd;
+  --muted-foreground: #6a6070;
+  --highlight-1: #ef5350;
+  --highlight-2: #42a5f5;
+  --highlight-3: #e8e0d0;
+}

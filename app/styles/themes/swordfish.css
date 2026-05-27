@@ -1,0 +1,13 @@
+[data-theme="swordfish"] {
+  --background: #09080d;
+  --surface: #0f0d14;
+  --surface-elevated: #16131e;
+  --border: #2a2535;
+  --accent: #d47a2a;
+  --accent-elevated: #f0a050;
+  --foreground: #e8e4d8;
+  --muted-foreground: #5a5060;
+  --highlight-1: #4dd0e1;
+  --highlight-2: #ff7043;
+  --highlight-3: #b0bec5;
+}

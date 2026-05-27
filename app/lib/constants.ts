@@ -80,6 +80,11 @@ export const treeData: TreeData = [
                         name: 'themes.css',
                         type: 'file',
                         path: '/my-portfolio/styles/themes.css'
+                    },
+                    {
+                        name: 'README.md',
+                        type: 'file',
+                        path: '/my-portfolio/styles/README.md'
                     }
                 ]
             },

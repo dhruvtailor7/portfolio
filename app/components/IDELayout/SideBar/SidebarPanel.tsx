@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 
 const MIN_WIDTH = 150;
 const MAX_WIDTH = 500;
-const DEFAULT_WIDTH = 192;
+const DEFAULT_WIDTH = 230;
 
 const HANDLE_WIDTH = 4;
 
