@@ -5,9 +5,11 @@
 @import "./themes/akatsuki.css";
 @import "./themes/akira.css";
 @import "./themes/attackOnTitan.css";
-@import "./themes/eclipse.css";
-@import "./themes/sakuraNoir.css";
-@import "./themes/violetEvergarden.css";
+@import "./themes/divergence.css";
+@import "./themes/edogawa.css";
+@import "./themes/instrumentality.css";
+@import "./themes/ouroboros.css";
+@import "./themes/swordfish.css";
 @import "./themes/vscodeDark.css";
 
 body {
@@ -20,6 +22,141 @@ body {
   body {
     font-size: 16px;
   }
+}
+
+/* ── Markdown namespace ───────────────────────────────────────────────────
+   All styles are scoped to .markdown so they never bleed into other components
+   and are never overridden by Tailwind preflight or parent element styles.
+─────────────────────────────────────────────────────────────────────────── */
+.markdown {
+  font-family: var(--font-jetbrains-mono, monospace);
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--foreground);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--foreground);
+}
+
+.markdown h1 { font-size: 1.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
+.markdown h2 { font-size: 1.35rem; border-bottom: 1px solid var(--border); padding-bottom: 0.2em; }
+.markdown h3 { font-size: 1.1rem; }
+.markdown h4 { font-size: 1rem; }
+.markdown h5 { font-size: 0.9rem; }
+.markdown h6 { font-size: 0.85rem; color: var(--muted-foreground); }
+
+.markdown p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.markdown a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.markdown a:hover {
+  color: var(--accent-elevated);
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.markdown ul { list-style-type: disc; }
+.markdown ol { list-style-type: decimal; }
+
+.markdown li {
+  margin-bottom: 0.25em;
+}
+
+.markdown li > ul,
+.markdown li > ol {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+
+.markdown blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1em;
+  margin: 1em 0;
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+
+.markdown code {
+  font-family: var(--font-jetbrains-mono, monospace);
+  font-size: 0.85em;
+  background: var(--surface-elevated);
+  color: var(--highlight-2);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.markdown pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.markdown pre code {
+  background: none;
+  padding: 0;
+  color: var(--foreground);
+  font-size: 0.875rem;
+}
+
+.markdown hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5em 0;
+}
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  font-size: 0.875rem;
+}
+
+.markdown th {
+  text-align: left;
+  padding: 0.5em 0.75em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.markdown td {
+  padding: 0.5em 0.75em;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.markdown tr:nth-child(even) td {
+  background: var(--surface);
+}
+
+.markdown img {
+  max-width: 100%;
+  border-radius: 6px;
 }
 
 @layer utilities {

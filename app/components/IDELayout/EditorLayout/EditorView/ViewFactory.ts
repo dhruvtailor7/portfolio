@@ -5,6 +5,7 @@ const viewRegistry: Record<string, () => Promise<{default: React.ComponentType}>
     "/my-portfolio/src/portfolio.tsx": () => import("@/app/content/Portfolio"),
     "/my-portfolio/.gitignore": () => import("@/app/content/GitIgnore"),
     "/my-portfolio/styles/themes.css": () => import("@/app/content/Theme"),
+    "/my-portfolio/styles/README.md": () => import("@/app/content/RelmReadme"),
     "package.json": () => import("@/app/content/PackageJSON")
 }
 

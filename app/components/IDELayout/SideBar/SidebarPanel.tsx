@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 
 const MIN_WIDTH = 150;
 const MAX_WIDTH = 500;
-const DEFAULT_WIDTH = 192;
+const DEFAULT_WIDTH = 230;
 
 const HANDLE_WIDTH = 4;
 
@@ -87,7 +87,7 @@ export default function SidebarPanel() {
             >
                 {ActivityFactory.getView(selectedActivity)}
             </div>
-            <div
+            {sidebarOpen && <div
                 onMouseDown={handleResizeStart}
                 className={`
                     absolute top-0 bottom-0 w-1 z-10
@@ -99,7 +99,7 @@ export default function SidebarPanel() {
                     width: `${HANDLE_WIDTH}px`,
                     cursor: getResizeCursor(width),
                 }}
-            />
+            />}
         </div>
     )
 }

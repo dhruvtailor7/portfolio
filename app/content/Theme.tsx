@@ -1,18 +1,18 @@
 import TextFile from "../components/TextFile"
 
 const content = [
-    `[data-theme="aurora"] {`,
-        "  --background: #0b0a1a;",
-        "  --surface: #110f24;",
-        "  --surface-elevated: #18162f;",
-        "  --border: #2a2450;",
-        "  --accent: #a78bfa;",
-        "  --accent-elevated: #c4b5fd;",
-        "  --foreground: #e2dff5;",
-        "  --muted-foreground: #6b5fa8;",
-        "  --highlight-1: #4ade80;",
-        "  --highlight-2: #38bdf8;",
-        "  --highlight-3: #f472b6;",
+    `[data-theme="abyssal"] {`,
+        "  --background: #020b18;",
+        "  --surface: #051525;",
+        "  --surface-elevated: #0a2035;",
+        "  --border: #0f3050;",
+        "  --accent: #06b6d4;",
+        "  --accent-elevated: #22d3ee;",
+        "  --foreground: #e0f7fa;",
+        "  --muted-foreground: #3d7a8a;",
+        "  --highlight-1: #818cf8;",
+        "  --highlight-2: #34d399;",
+        "  --highlight-3: #fbbf24;",
     "}",      
 ]
 

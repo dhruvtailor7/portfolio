@@ -1,0 +1,13 @@
+[data-theme="divergence"] {
+  --background: #080b08;
+  --surface: #0d110d;
+  --surface-elevated: #121812;
+  --border: #1a2a1a;
+  --accent: #00c853;
+  --accent-elevated: #69f0ae;
+  --foreground: #e8f5e9;
+  --muted-foreground: #3a5a3a;
+  --highlight-1: #ffd740;
+  --highlight-2: #40c4ff;
+  --highlight-3: #ea80fc;
+}
