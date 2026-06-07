@@ -2,7 +2,7 @@ import type { PulseProps } from "./types"
 
 export default function LiveViewerCount() {
   return (
-    <div className="flex flex-row items-center gap-2">
+    <div className="flex flex-row items-center gap-2 px-1 md:px-2">
       <Pulse color="#32b94d" />
       <p className="flex flex-row items-center gap-1">
         <span className="font-bold">4</span>

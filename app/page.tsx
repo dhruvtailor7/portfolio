@@ -9,8 +9,8 @@ export default function Home() {
       <IDEProvider>
         <TitleBar />
         <IDELayout />
+        <StatusBar />
       </IDEProvider>
-      <StatusBar />
     </div>
   );
 }

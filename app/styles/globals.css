@@ -18,6 +18,11 @@ body {
   color: var(--foreground);
 }
 
+::selection {
+  background: color-mix(in srgb, var(--accent) 50%, transparent);
+  color: var(--accent-elevated);
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 16px;
