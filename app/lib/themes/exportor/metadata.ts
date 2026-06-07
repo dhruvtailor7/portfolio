@@ -1,5 +1,4 @@
 import { themes } from ".."
-import { myData } from "../../constants"
 
 export const data = {
     name: "Realm-themes",
@@ -39,19 +38,20 @@ export const manifestXml = `<?xml version="1.0" encoding="utf-8"?>
 </PackageManifest>
 `
 
-const themeTable = Object.values(themes)
-    .map(t => `| **${t.name}** | ${t.description} |`)
-    .join('\n')
+export function getReadme(siteUrl: string) {
+    const themeTable = Object.values(themes)
+        .map(t => `| **${t.name}** | ${t.description} |`)
+        .join('\n')
 
-export const readme = `# ${data.displayName}
+    return `# ${data.displayName}
 
-Dark color themes for VS Code and Cursor — exported straight from ${myData.site.url}
+Dark color themes for VS Code and Cursor — exported straight from ${siteUrl}
 
 ## Step 1 — Download
 
 If you haven't downloaded the extension yet:
 
-1. Open ${myData.site.url} in your browser
+1. Open ${siteUrl} in your browser
 2. In the left sidebar, open the **Extensions** panel
 3. Click the **Export** button on the **${data.displayName}** card
 4. \`${data.name}.vsix\` will download automatically
@@ -79,6 +79,7 @@ Look for any of the **${data.displayName}** entries:
 |-------|-------------|
 ${themeTable}
 `
+}
 
 export const pkg = {
     name: data.name,
