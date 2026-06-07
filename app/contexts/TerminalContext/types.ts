@@ -3,10 +3,12 @@ import { TerminalLine } from "@/app/components/IDELayout/BottomPanel/Views/Termi
 export type TerminalContextType = {
     input: string
     handleInput: (input: string) => void
-    transcript: TerminalLine[]
-    history: string[]
-    historyIndex: number | null
-    cwd: string
-
     submitCommand: (command: string) => void
+
+    history: string[]
+    onArrowUp: () => void
+    onArrowDown: () => void
+
+    transcript: TerminalLine[]
+    cwd: string
 }

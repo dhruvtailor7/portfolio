@@ -1,8 +1,11 @@
+"use client"
+
 import MarkdownFile from "../components/MarkdownFile"
-import { readme } from "../lib/themes/exportor/metadata"
+import { getSiteUrl } from "../lib/config"
+import { getReadme } from "../lib/themes/exportor/metadata"
 
 export default function RealmReadme() {
     return (
-        <MarkdownFile content={readme} />
+        <MarkdownFile content={getReadme(getSiteUrl())} />
     )
 }

@@ -1,6 +1,7 @@
 import { zipSync, strToU8 } from "fflate"
 import { themes } from ".."
-import { contentTypesXml, manifestXml, pkg, data, readme } from "./metadata"
+import { getSiteUrl } from "../../config"
+import { contentTypesXml, manifestXml, pkg, data, getReadme } from "./metadata"
 import { readThemeColors } from "./colorReader"
 import { buildThemeJson } from "./themeBuilder"
 import { buildIconSvg, svgToPng } from "./iconBuilder"
@@ -12,7 +13,7 @@ export async function exportThemes() {
         '[Content_Types].xml':    strToU8(contentTypesXml),
         'extension.vsixmanifest': strToU8(manifestXml),
         'extension/package.json': strToU8(JSON.stringify(pkg, null, 2)),
-        'extension/README.md':    strToU8(readme),
+        'extension/README.md':    strToU8(getReadme(getSiteUrl())),
         'extension/icon.png':     iconBytes,
     }
 

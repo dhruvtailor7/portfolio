@@ -12,7 +12,8 @@ export const openCommand: CommandDefinition = {
                 output: ['Usage: open <path>'],
             }
         }
-        const success = ctx.files.openByPath(filePath);
+        const resolved = ctx.fs.resolvePath(filePath)
+        const success = ctx.files.openByPath(resolved);
         if (!success) {
             return {
                 status: 'error',

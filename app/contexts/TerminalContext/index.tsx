@@ -7,16 +7,17 @@ import useIDEContext from "@/app/hooks/useIDEContext";
 import { FileNode } from "@/app/components/IDELayout/SideBar/Activities/ExplorerView/TreeView/types";
 import { findFileByPath, findDirectoryByPath, resolvePath, ROOT_PATH } from "@/app/lib/fileHelper";
 import { treeData } from "@/app/lib/constants";
+import useTerminalHistory from "@/app/hooks/useTerminalHistory";
 
 export const TerminalContext = createContext<TerminalContextType | null>(null)
 
 export function TerminalProvider({ children }: { children: React.ReactNode }) {
     const [input, setInput] = useState("");
-    const [history, setHistory] = useState<string[]>([]);
-    const [historyIndex, setHistoryIndex] = useState<number | null>(null);
+
+    const { history, resetCursor, loadPreviousCommand, loadNextCommand, recordCommand } = useTerminalHistory();
     const [transcript, setTranscript] = useState<TerminalLine[]>([
         { kind: 'system', text: 'Type `help` to see available commands', tone: 'default' },
-        { kind: 'system', text: 'Try `ls` • `theme akira` • `open portfolio.tsx` • `contact`', tone: 'muted' },
+        { kind: 'system', text: 'Try `ls` • `theme akira` • `open src/portfolio.tsx` • `contact`', tone: 'muted' },
     ]);
     const [cwd, setCwd] = useState(ROOT_PATH);
 
@@ -27,8 +28,7 @@ export function TerminalProvider({ children }: { children: React.ReactNode }) {
         if (!command) return;
 
         setTranscript((prev) => [...prev, { kind: 'prompt', text: command, cwd }]);
-        setHistory((prev) => [...prev, command]);
-        setHistoryIndex(null);
+        recordCommand(command);
         setInput('');
 
         const result = runCommand(command, {
@@ -82,19 +82,35 @@ export function TerminalProvider({ children }: { children: React.ReactNode }) {
             }
             return prev;
         });
-    }, [openFile, cwd]);
+    }, [recordCommand, cwd, openFile]);
 
     const handleInput = useCallback((input: string) => {
         setInput(input);
-    }, []);
+        resetCursor();
+    }, [resetCursor]);
+
+    const onArrowUp = useCallback(() => {
+        const previousCommand = loadPreviousCommand(input);
+        if (previousCommand != null) {
+            setInput(previousCommand);
+        }
+    }, [input, loadPreviousCommand]);
+
+    const onArrowDown = useCallback(() => {
+        const nextCommand = loadNextCommand();
+        if (nextCommand != null) {
+            setInput(nextCommand);
+        }
+    }, [loadNextCommand]);
 
     return (
         <TerminalContext.Provider
             value={{
                 input,
                 handleInput,
+                onArrowUp,
+                onArrowDown,
                 history,
-                historyIndex,
                 transcript,
                 cwd,
                 submitCommand,
