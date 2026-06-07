@@ -2,8 +2,8 @@ import { themes } from ".."
 import { myData } from "../../constants"
 
 export const data = {
-    name: "relm-themes",
-    displayName: "Relm Themes",
+    name: "Realm-themes",
+    displayName: "Realm Themes",
     description: "Dhruv Tailor's portfolio color themes",
     version: "1.0.0",
     publisher: "Dhruv Tailor",
