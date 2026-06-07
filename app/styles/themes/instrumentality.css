@@ -1,0 +1,13 @@
+[data-theme="instrumentality"] {
+  --background: #06080a;
+  --surface: #0a0d12;
+  --surface-elevated: #0f1420;
+  --border: #1a2035;
+  --accent: #7c3aed;
+  --accent-elevated: #9d5cf5;
+  --foreground: #e0e8f8;
+  --muted-foreground: #4a5060;
+  --highlight-1: #22c55e;
+  --highlight-2: #f97316;
+  --highlight-3: #60a5fa;
+}

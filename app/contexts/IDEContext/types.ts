@@ -17,4 +17,7 @@ export type IDEContextType = {
 
     sidebarOpen: boolean
     toggleSidebar: () => void
+
+    bottomPanelOpen: boolean
+    toggleBottomPanel: () => void
 }

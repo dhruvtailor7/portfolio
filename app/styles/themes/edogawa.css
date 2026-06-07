@@ -1,0 +1,13 @@
+[data-theme="edogawa"] {
+  --background: #080d18;
+  --surface: #0d1424;
+  --surface-elevated: #12193a;
+  --border: #1e2d52;
+  --accent: #1976d2;
+  --accent-elevated: #2196f3;
+  --foreground: #dce8ff;
+  --muted-foreground: #4a6080;
+  --highlight-1: #90caf9;
+  --highlight-2: #e53935;
+  --highlight-3: #80cbc4;
+}
