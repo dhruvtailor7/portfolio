@@ -17,6 +17,10 @@ class ThemeService {
             const savedThemeId = localStorage.getItem(THEME_STORAGE_KEY) as Theme['id'] | null
             this.setTheme(savedThemeId && themes[savedThemeId] ? savedThemeId : vscodeDarkTheme.id)
         }
+
+        this.getCurrentTheme = this.getCurrentTheme.bind(this)
+        this.getCurrentThemeId = this.getCurrentThemeId.bind(this)
+        this.setTheme = this.setTheme.bind(this)
     }
 
     public getCurrentTheme(): Theme | undefined {

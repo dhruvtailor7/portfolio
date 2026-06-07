@@ -15,13 +15,17 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
     const [selectedActivity, setSelectedActivity] =
         useState<IDEContextType['selectedActivity']>(DEFAULT_SELECTED_ACTIVITY)
 
+    // TODO: Seperate to FileContext Provider
     const entryFile = useMemo(() => findFileByPath(treeData, ENTRY_FILE), [])
-
     const [openFiles, setOpenFiles] = useState<IDEContextType['openFiles']>(entryFile ? [entryFile] : [])
     const [activeFile, setActiveFile] = useState<IDEContextType['activeFile']>(entryFile?.path)
 
+    // TODO: Seperate to WindowContext Provider
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const toggleSidebar = useCallback(() => setSidebarOpen(prev => !prev), []);
+
+    const [bottomPanelOpen, setBottomPanelOpen] = useState(false);
+    const toggleBottomPanel = useCallback(() => setBottomPanelOpen(prev => !prev), []);
 
     const openFile = useCallback((file: FileNode) => {
         setOpenFiles((files) => {
@@ -70,6 +74,9 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
 
             sidebarOpen,
             toggleSidebar,
+
+            bottomPanelOpen,
+            toggleBottomPanel,
         }}>
             {children}
         </IDEContext.Provider>
