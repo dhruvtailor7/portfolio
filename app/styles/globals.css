@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@vscode/codicons/dist/codicon.css";
+@import "./codicon.css";
 @import "./animations.css";
 @import "./themes/abyssal.css";
 @import "./themes/akatsuki.css";

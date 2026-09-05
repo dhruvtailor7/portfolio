@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, useCallback, useMemo, useState } from "react"
+import posthog from "posthog-js"
 import { IDEContextType } from "./types"
 import { findFileByPath } from "@/app/lib/fileHelper"
 import { treeData } from "@/app/lib/constants"
@@ -21,21 +22,24 @@ export function IDEProvider({ children }: { children: React.ReactNode }) {
     const [activeFile, setActiveFile] = useState<IDEContextType['activeFile']>(entryFile?.path)
 
     // TODO: Seperate to WindowContext Provider
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
     const toggleSidebar = useCallback(() => setSidebarOpen(prev => !prev), []);
 
     const [bottomPanelOpen, setBottomPanelOpen] = useState(false);
     const toggleBottomPanel = useCallback(() => setBottomPanelOpen(prev => !prev), []);
 
     const openFile = useCallback((file: FileNode) => {
-        setOpenFiles((files) => {
-            const exists = files.some((f) => f.path === file.path)
-            if (exists) return files
-            return [...files, file]
-        })
+        const isNew = !openFiles.some((open) => open.path === file.path)
+        if (isNew) {
+            posthog.capture("$pageview", {
+                $current_url: `${window.location.origin}${file.path}`,
+                $pathname: file.path,
+            })
+            setOpenFiles((files) => [...files, file])
+        }
 
         setActiveFile(file.path)
-    }, [])
+    }, [openFiles])
 
     const closeFile = useCallback((file: FileNode) => {
         setOpenFiles((files) => {
