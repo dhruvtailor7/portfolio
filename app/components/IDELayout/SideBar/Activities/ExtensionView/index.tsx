@@ -8,6 +8,7 @@ import { myData, treeData } from "@/app/lib/constants"
 import eventEmitter from "@/app/lib/eventEmitter"
 import { exportThemes } from "@/app/lib/themes/exportor"
 import { findFileByPath } from "@/app/lib/fileHelper"
+import posthog from "posthog-js"
 import useIDEContext from "@/app/hooks/useIDEContext"
 import { useCallback, useEffect, useRef, useState } from "react"
 
@@ -26,6 +27,9 @@ function InstalledExtensions() {
     const { openFile } = useIDEContext()
 
     const handleExport = useCallback(() => {
+        posthog.capture("themes_export_clicked", {
+            extension: "themes",
+        })
         if (README_FILE) openFile(README_FILE)
         exportThemes().catch((error) => console.error('error exporting themes', error))
     }, [openFile])
