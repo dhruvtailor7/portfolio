@@ -1,16 +1,7 @@
-import IDELayout from "./components/IDELayout";
-import StatusBar from "./components/StatusBar";
-import TitleBar from "./components/TitleBar";
-import { IDEProvider } from "./contexts/IDEContext";
+import IDEWindow from "./components/IDEWindow";
 
 export default function Home() {
   return (
-    <div className="h-full flex flex-col">
-      <IDEProvider>
-        <TitleBar />
-        <IDELayout />
-        <StatusBar />
-      </IDEProvider>
-    </div>
+    <IDEWindow />
   );
 }

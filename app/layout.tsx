@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Cabin_Sketch, JetBrains_Mono } from "next/font/google";
 import "./styles/globals.css";
 import { myData } from "@/app/lib/constants"
-import { Analytics } from '@vercel/analytics/next';
+import PostHogProvider from "./components/PostHogProvider";
 import { isPreview } from "./lib/config";
 import QuickPickerDropdown from "./components/QuickPickerDropdown";
 import vscodeDarkTheme from "./lib/themes/vscodeDark";
@@ -74,8 +74,7 @@ export default function RootLayout({
       className={`${jetbrainsMono.variable} ${cabinetGrotesk.variable} h-full antialiased select-none overflow-hidden`}
     >
       <body className="h-full overflow-hidden">
-        {children}
-        {!isPreview && <Analytics />}
+        {!isPreview ? <PostHogProvider>{children}</PostHogProvider> : children}
         <QuickPickerDropdown />
       </body>
     </html>
